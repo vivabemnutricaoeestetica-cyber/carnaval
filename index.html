@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>VivaBem • Carnaval</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+  --rose: #d6a7a7;
+  --rose-dark: #b98585;
+  --bg: #f6e9ec;
+  --white: #ffffffcc;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #f9eff2, var(--bg));
+  color: #7a4b4b;
+}
+
+.container {
+  max-width: 430px;
+  margin: auto;
+  padding: 24px 16px 40px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+
+.options {
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 22px;
+  padding: 18px 14px;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  transition: 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h2 {
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.combo {
+  display: none;
+  background: var(--white);
+  border-radius: 26px;
+  padding: 22px 18px;
+  text-align: left;
+  animation: fade 0.4s ease;
+}
+
+@keyframes fade {
+  from {opacity:0; transform:translateY(10px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+.combo h3 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.combo ul {
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+.price {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.old {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.promo {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--rose-dark);
+}
+
+.whatsapp {
+  display: block;
+  margin: 18px auto 8px;
+  background: #25D366;
+  color: #fff;
+  text-align: center;
+  padding: 14px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.back {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.logo {
+  margin-top: 36px;
+  text-align: center;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo-text span {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>O que você prefere no Carnaval?</h1>
+
+<div class="options" id="options">
+  <div class="card" onclick="openCombo('shape')">
+    <h2>1. Ficar no shape</h2>
+    <p>Bumbum na nuca</p>
+  </div>
+
+  <div class="card" onclick="openCombo('rosto')">
+    <h2>2. Ter o rosto dos deuses</h2>
+    <p>Brilho e viço para durar a make</p>
+  </div>
+
+  <div class="card" onclick="openCombo('saude')">
+    <h2>3. Ter uma saúde de ferro</h2>
+    <p>Pra curtir o carnaval</p>
+  </div>
+</div>
+
+<!-- SHAPE -->
+<div class="combo" id="shape">
+<h3>🔥 Combo Carnaval • Ficar no Shape</h3>
+<ul>
+<li>6x Drenagem Modeladora</li>
+<li>6x Corrente Russa (glúteo)</li>
+<li>6x Manthus (glúteo e posterior)</li>
+<li>4x Manta Térmica</li>
+<li>2x Carbox (glúteo ou culote)</li>
+</ul>
+
+<div class="price">
+<div class="old">Valor avulso: R$ 3.013,80</div>
+<div class="promo">R$ 1.997,00</div>
+</div>
+
+<a class="whatsapp"
+href="https://wa.me/5581996240193?text=Oi,%20quero%20o%20*Combo%20Carnaval%20–%20Ficar%20no%20Shape*%20por%20R$%201.997,00%20🎭💖"
+target="_blank">
+Quero esse combo no Carnaval 🎭
+</a>
+
+<div class="back" onclick="goBack()">← Voltar</div>
+</div>
+
+<!-- ROSTO -->
+<div class="combo" id="rosto">
+<h3>✨ Combo Carnaval • Rosto dos Deuses</h3>
+<ul>
+<li>3x Limpeza de Pele</li>
+<li>2x Peeling (Retinóico ou Black)</li>
+<li>4x LED Facial</li>
+<li>2x Face Detox</li>
+<li>2x Drenagem Facial</li>
+</ul>
+
+<div class="price">
+<div class="old">Valor avulso: R$ 1.550,00</div>
+<div class="promo">R$ 1.099,00</div>
+</div>
+
+<a class="whatsapp"
+href="https://wa.me/5581996240193?text=Oi,%20quero%20o%20*Combo%20Carnaval%20–%20Rosto%20dos%20Deuses*%20por%20R$%201.099,00%20✨💖"
+target="_blank">
+Quero esse combo no Carnaval 🎭
+</a>
+
+<div class="back" onclick="goBack()">← Voltar</div>
+</div>
+
+<!-- SAÚDE -->
+<div class="combo" id="saude">
+<h3>💪 Combo Carnaval • Saúde de Ferro</h3>
+<ul>
+<li>4x Drenagem Linfática</li>
+<li>3x Massagem Relaxante</li>
+<li>2x Reflexologia Podal</li>
+<li>2x Face Detox</li>
+<li>2x LED Facial</li>
+</ul>
+
+<div class="price">
+<div class="old">Valor avulso: R$ 1.639,00</div>
+<div class="promo">R$ 1.099,00</div>
+</div>
+
+<a class="whatsapp"
+href="https://wa.me/5581996240193?text=Oi,%20quero%20o%20*Combo%20Carnaval%20–%20Saúde%20de%20Ferro*%20por%20R$%201.099,00%20💪🎭"
+target="_blank">
+Quero esse combo no Carnaval 🎭
+</a>
+
+<div class="back" onclick="goBack()">← Voltar</div>
+</div>
+
+<div class="logo">
+  <div class="logo-text">
+    VivaBem
+    <span>NUTRIÇÃO E ESTÉTICA AVANÇADA</span>
+  </div>
+</div>
+
+</div>
+
+<script>
+function openCombo(id) {
+  document.getElementById('options').style.display = 'none';
+  document.querySelectorAll('.combo').forEach(c => c.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+}
+
+function goBack() {
+  document.getElementById('options').style.display = 'grid';
+  document.querySelectorAll('.combo').forEach(c => c.style.display = 'none');
+}
+</script>
+
+</body>
+</html>
